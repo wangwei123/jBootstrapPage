@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>分页控件jBootstrapPage</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<meta http-equiv="Expires" CONTENT= "0">   
+<meta http-equiv="Cache-Control" CONTENT= "no-cache">   
+<meta http-equiv="Pragma" CONTENT= "no-cache">  
+
+<link href="jBootsrapPage.css" rel="stylesheet" />
+<script src="jquery-1.10.2.min.js"></script>
+<script src="jBootstrapPage.js"></script>
+
+<style>
+
+.pagination{font-weight:bold;}
+
+</style>
+
+<script type="text/javascript">
+$(function(){
+    createPage(10, 13, 150);
+    
+    function createPage(pageSize, buttons, total) {
+        $(".pagination").jBootstrapPage({
+            pageSize : pageSize,
+            total : total,
+            maxPageButton:buttons,
+            onPageClicked: function(obj, pageIndex) {
+              $('#pageIndex').html('您选择了第<font color=red>'+(pageIndex+1)+'</font>页');
+            }
+        });
+    }
+
+    $('#btn1').click(function(){
+        createPage(10, 10, 200);
+    });
+
+    $('#btn2').click(function(){
+        createPage(10, 15, 200);
+    });
+
+    $('#btn3').click(function(){
+        createPage(5, 12, 200);
+    });
+       
+});
+</script>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body>
+    <div style="padding-left:100px;">
+      <h1>分页控件jBootstrapPage</h1>
+
+      <input type="button" id="btn1" value="每页10条，10个按钮，共200条" />
+      &nbsp;&nbsp;
+      <input type="button" id="btn2" value="每页10条，15个按钮，共200条" />
+      &nbsp;&nbsp;
+      <input type="button" id="btn3" value="每页5条，12个按钮，共200条" />
+
+      <p id="pageIndex" style="font-size:20px;font-weight:bold;color:blue;margin-left:150px;"></p>
+
+      <ul class="pagination"></ul>
+    </div>
+</body>
+<!-- END BODY -->
+</html>
