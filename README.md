@@ -1,7 +1,8 @@
 jBootstrapPage
 ==============
 
-一个Bootstrap风格的分页控件，对于喜欢Bootstrap简洁美观和扁平化的同学可以关注jBootstrapPage
+一个Bootstrap风格的分页控件，对于喜欢Bootstrap简洁美观和扁平化的同学可以关注jBootstrapPage，
+目前jBootstrapPage最新版为V0.1，后续还有更多功能需要完善。
 
 demo: http://www.it175.cn/demo/jBootstrapPage/
 
@@ -26,7 +27,8 @@ html代码
 
 javascript代码调用
 ===============
-每页显示多少条数据(pageSize),显示多少个分页按钮(buttons),传入数据总行数(total)即可
+每页显示多少条数据(pageSize),显示多少个分页按钮(buttons),传入数据总行数(total)即可，
+如果需要在选中某一页，然后去请求服务器端，可以在onPageClicked回调函数中完成。
  
 ```javascript
 
