@@ -4,7 +4,7 @@ jBootstrapPage
 一个Bootstrap风格的分页控件，对于喜欢Bootstrap简洁美观和扁平化的同学可以关注jBootstrapPage，
 目前jBootstrapPage最新版为V0.1，后续还有更多功能需要完善。
 
-demo: http://www.it175.cn/demo/jBootstrapPage/
+demo演示地址: http://www.it175.cn/demo/jBootstrapPage/
 
 代码示例:
 ===============
